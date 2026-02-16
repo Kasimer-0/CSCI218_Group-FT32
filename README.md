@@ -41,9 +41,10 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 ### 2. Simple CNN (Trained from Scratch)
 * **File:** `CNN_v0.1_1000_Epochs.ipynb`
 * **Approach:** Training a Convolutional Neural Network from random initialization.
-* **Architecture:** 3 Convolutional Blocks (Conv2D -> BatchNorm -> MaxPool).
-* **Training:** Trained for **1,000 Epochs**.
-* **Result:** **Severe Overfitting**. While training accuracy reached >90%, test accuracy stalled at **~26.9%**. This highlights the difficulty of learning visual filters from scratch with limited data.
+* **Result:** **Catastrophic Overfitting**.
+    * **Training Accuracy:** Peaked at **~92%** (Model memorized the data).
+    * **Validation Accuracy:** Stalled at **~28%** (Model failed to learn patterns).
+    * **Conclusion:** This explicitly demonstrates that deep learning from scratch requires massive datasets, justifying our move to Transfer Learning.
 
 ### 3. ResNet-50 (Transfer Learning)
 * **File:** `CNN_ResNet50_Transfer_Learning.ipynb`
@@ -55,11 +56,11 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 
 ## 🏆 Performance Comparison
 
-| Model | Method | Training Accuracy | Test Accuracy | Training Time | Key Observation |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **MLP** | Hand-Crafted Features | 98.27% | **81.63%** | ~2 mins | Strong baseline, lacks spatial invariance. |
-| **Simple CNN** | Trained from Scratch | >90.00% | **26.93%** | ~8 hours | Catastrophic overfitting due to data scarcity. |
-| **ResNet-50** | Transfer Learning | 98.43% | **87.48%** | ~45 mins | **Optimal solution**; excellent generalization. |
+| Model | Method | Training Accuracy | Test Accuracy | Key Observation |
+| :--- | :--- | :--- | :--- | :--- |
+| **MLP** | Hand-Crafted Features | 98.27% | **81.63%** | Robust baseline using manual features. |
+| **Simple CNN** | Trained from Scratch | **~92.00%** | **~28.00%** | **Failed:** 64% gap between Train/Test (Overfitting). |
+| **ResNet-50** | Transfer Learning | 98.43% | **87.48%** | **Optimal:** Solved the data scarcity issue. |
 
 ## 🖼️ Visualization Results
 
