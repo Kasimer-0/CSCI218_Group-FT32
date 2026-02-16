@@ -73,6 +73,7 @@ The code is designed to run in **Google Colab**.
     ```
 2.  **Upload Data:**
     * Download the dataset and upload it to your Google Drive.
+    * Dataset address：https://drive.google.com/drive/folders/1Lb_MLFVi7Hse45g0XRCTmp9jYXKlZrUa?usp=drive_link
     * Update the `DATASET_PATH` variable in the notebooks to point to your Drive folder.
 3.  **Install Dependencies:**
     ```python
@@ -80,15 +81,3 @@ The code is designed to run in **Google Colab**.
     ```
 4.  **Run the Notebooks:**
     * Open any `.ipynb` file in Google Colab or Jupyter Notebook and execute the cells.
-
-## 👥 Contributors
-* **[Your Name]**: Model implementation (CNN/ResNet), Report writing.
-* **[Team Member Name]**: MLP implementation, Feature extraction pipeline.
-* **[Team Member Name]**: KNN Baseline, Data augmentation.
-
-## 📜 License
-This project is for academic purposes (CSCI218 Group Project).
-
-## 🙏 Acknowledgments
-* Course: CSCI218 Foundations of AI (University of Wollongong).
-* Dataset provided by [Stanford Vision Lab](http://vision.stanford.edu/).
