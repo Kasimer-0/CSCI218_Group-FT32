@@ -62,12 +62,6 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 | **Simple CNN** | Trained from Scratch | **~92.00%** | **~28.00%** | **Failed:** 64% gap between Train/Test (Overfitting). |
 | **ResNet-50** | Transfer Learning | 98.43% | **87.48%** | **Optimal:** Solved the data scarcity issue. |
 
-## 🖼️ Visualization Results
-
-*(Place your confusion matrix or prediction sample images here if available)*
-
-* **Confusion Matrix (ResNet-50):** Shows high diagonal density, indicating correct classification for most breeds.
-* **Failure Cases:** Confusion primarily occurs between size-variant breeds (e.g., *Toy Poodle* vs. *Miniature Poodle*) due to loss of scale information during resizing.
 
 ## 🚀 Installation & Usage
 
