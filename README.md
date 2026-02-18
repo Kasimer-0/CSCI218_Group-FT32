@@ -20,10 +20,6 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 * **Source:** [Stanford Dogs Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) (Subset of ImageNet).
 * **Classes:** 50 distinct dog breeds.
 * **Size:** Approximately 8,000 images.
-* **Split:** 80% Training, 10% Validation, 10% Testing.
-* **Preprocessing:**
-    * MLP: Resized to 128x128, Feature Extraction.
-    * ResNet: Resized to 256x256, Center Cropped to 224x224, Normalized.
 
 ## 🛠️ Methodologies & Models
 
