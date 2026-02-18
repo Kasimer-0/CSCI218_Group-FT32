@@ -45,7 +45,7 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 ### 3. ResNet-50 (Transfer Learning)
 * **File:** `CNN_ResNet50_Transfer_Learning.ipynb`
 * **Approach:** Leveraging a model pre-trained on ImageNet.
-* **Technique:** * Frozen Backbone (Feature Extractor).
+* **Technique:** Frozen Backbone (Feature Extractor).
     * Modified Fully Connected Head ($2048 \to 50$ classes).
 * **Training:** Fine-tuned for only **10 Epochs**.
 * **Result:** **Best Performance (87.48% accuracy)**. The model effectively bridged the semantic gap by reusing learned visual hierarchies.
