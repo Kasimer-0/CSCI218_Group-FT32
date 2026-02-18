@@ -38,8 +38,8 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 * **File:** `CNN_v0.1_1000_Epochs.ipynb`
 * **Approach:** Training a Convolutional Neural Network from random initialization.
 * **Result:** **Catastrophic Overfitting**.
-    * **Training Accuracy:** Peaked at **~92%** (Model memorized the data).
-    * **Validation Accuracy:** Stalled at **~28%** (Model failed to learn patterns).
+    * **Training Accuracy:** Peaked at **92%** (Model memorized the data).
+    * **Validation Accuracy:** Stalled at **28%** (Model failed to learn patterns).
     * **Conclusion:** This explicitly demonstrates that deep learning from scratch requires massive datasets, justifying our move to Transfer Learning.
 
 ### 3. ResNet-50 (Transfer Learning)
@@ -55,7 +55,7 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 | Model | Method | Training Accuracy | Test Accuracy | Key Observation |
 | :--- | :--- | :--- | :--- | :--- |
 | **MLP** | Hand-Crafted Features | 98.27% | **81.63%** | Robust baseline using manual features. |
-| **Simple CNN** | Trained from Scratch | **~92.00%** | **~28.00%** | **Failed:** 64% gap between Train/Test (Overfitting). |
+| **Simple CNN** | Trained from Scratch | **92.00%** | **28.00%** | **Failed:** 64% gap between Train/Test (Overfitting). |
 | **ResNet-50** | Transfer Learning | 98.43% | **87.48%** | **Optimal:** Solved the data scarcity issue. |
 
 
