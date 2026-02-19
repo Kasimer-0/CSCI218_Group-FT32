@@ -65,3 +65,8 @@ The code is designed to run in **Google Colab**.
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/YourUsername/Dog-Breed-Recognition.git](https://github.com/YourUsername/Dog-Breed-Recognition.git)
+   
+2.  **Upload Data:**
+    * Download the dataset and upload it to your Google Drive.
+    * Dataset address：https://drive.google.com/drive/folders/1wiQCgpwT2u3uTpgyw7l3QDmuwL9HViDK?usp=drive_link
+    * Update the `DATASET_PATH` variable in the notebooks to point to your Drive folder.
