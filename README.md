@@ -12,9 +12,9 @@ This project implements an AI agent capable of performing **Fine-Grained Image C
 Unlike general object detection, dog breed recognition is challenging due to **high inter-class similarity** (e.g., distinguishing *Miniature Poodle* from *Toy Poodle*) and **high intra-class variation**. 
 
 We adopted a **comparative approach**, implementing and evaluating three distinct methodologies to demonstrate the evolution of computer vision techniques:
-1.  **MLP (Multi-Layer Perceptron):** Baseline using hand-crafted feature engineering.
-2.  **Simple CNN:** Deep learning model trained from scratch (to demonstrate data scarcity challenges).
-3.  **ResNet-50 (Transfer Learning):** State-of-the-art approach utilizing pre-trained ImageNet weights.
+1. **MLP (Multi-Layer Perceptron):** Baseline using hand-crafted feature engineering.
+2. **Simple CNN:** Deep learning model trained from scratch (to demonstrate data scarcity challenges).
+3. **ResNet-50 (Transfer Learning):** State-of-the-art approach utilizing pre-trained ImageNet weights.
 
 ## 📊 Dataset
 * **Source:** [Stanford Dogs Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) (Subset of ImageNet).
@@ -35,16 +35,16 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 * **Result:** Surprisingly robust (**81.63% accuracy**), proving the effectiveness of manual feature engineering.
 
 ### 2. Simple CNN (Trained from Scratch)
-* **File:** `CNN_v0.1_1000_Epochs.ipynb`
-* **Approach:** Training a Convolutional Neural Network from random initialization.
+* **File:** `AI Project — CNN v0.1 (1000 Epochs).ipynb`
+* **Approach:** Training a Convolutional Neural Network from random initialization using TensorFlow/Keras.
 * **Result:** **Catastrophic Overfitting**.
-    * **Training Accuracy:** Peaked at **92%** (Model memorized the data).
-    * **Validation Accuracy:** Stalled at **26.93%** (Model failed to learn patterns).
+    * **Training Accuracy:** Peaked at **~92%** (Model memorized the training data).
+    * **Validation Accuracy:** Stalled at **26.93%** (Model failed to generalize to unseen patterns).
     * **Conclusion:** This explicitly demonstrates that deep learning from scratch requires massive datasets, justifying our move to Transfer Learning.
 
 ### 3. ResNet-50 (Transfer Learning)
-* **File:** `CNN_ResNet50_Transfer_Learning.ipynb`
-* **Approach:** Leveraging a model pre-trained on ImageNet.
+* **File:** `CNN (ResNet-50 Transfer Learning).ipynb`
+* **Approach:** Leveraging a model pre-trained on ImageNet using PyTorch.
 * **Technique:** Frozen Backbone (Feature Extractor).
     * Modified Fully Connected Head ($2048 \to 50$ classes).
 * **Training:** Fine-tuned for only **10 Epochs**.
@@ -52,28 +52,16 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 
 ## 🏆 Performance Comparison
 
-| Model | Method | Training Accuracy | Test Accuracy | Key Observation |
+| Model | Method | Training Accuracy | Test/Val Accuracy | Key Observation |
 | :--- | :--- | :--- | :--- | :--- |
 | **MLP** | Hand-Crafted Features | 98.27% | **81.63%** | Robust baseline using manual features. |
-| **Simple CNN** | Trained from Scratch | **92.00%** | **26.93%** | **Failed:** 64% gap between Train/Test (Overfitting). |
+| **Simple CNN** | Trained from Scratch | **~92.00%** | **26.93%** | **Failed:** >60% gap between Train/Val (Overfitting). |
 | **ResNet-50** | Transfer Learning | 98.43% | **87.48%** | **Optimal:** Solved the data scarcity issue. |
-
 
 ## 🚀 Installation & Usage
 
 The code is designed to run in **Google Colab**.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/YourUsername/Dog-Breed-Recognition.git](https://github.com/YourUsername/Dog-Breed-Recognition.git)
-    ```
-2.  **Upload Data:**
-    * Download the dataset and upload it to your Google Drive.
-    * Dataset address：https://drive.google.com/drive/folders/1wiQCgpwT2u3uTpgyw7l3QDmuwL9HViDK?usp=drive_link
-    * Update the `DATASET_PATH` variable in the notebooks to point to your Drive folder.
-3.  **Install Dependencies:**
-    ```python
-    pip install torch torchvision tensorflow scikit-learn opencv-python matplotlib seaborn pandas tqdm
-    ```
-4.  **Run the Notebooks:**
-    * Open any `.ipynb` file in Google Colab or Jupyter Notebook and execute the cells.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/YourUsername/Dog-Breed-Recognition.git](https://github.com/YourUsername/Dog-Breed-Recognition.git)
