@@ -55,7 +55,7 @@ We adopted a **comparative approach**, implementing and evaluating three distinc
 | Model | Method | Training Accuracy | Test/Val Accuracy | Key Observation |
 | :--- | :--- | :--- | :--- | :--- |
 | **MLP** | Hand-Crafted Features | 98.27% | **81.63%** | Robust baseline using manual features. |
-| **Simple CNN** | Trained from Scratch | **~92.00%** | **26.93%** | **Failed:** >60% gap between Train/Val (Overfitting). |
+| **Simple CNN** | Trained from Scratch | **92.00%** | **26.93%** | **Failed:** >60% gap between Train/Val (Overfitting). |
 | **ResNet-50** | Transfer Learning | 98.43% | **87.48%** | **Optimal:** Solved the data scarcity issue. |
 
 ## 🚀 Installation & Usage
